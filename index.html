@@ -28,12 +28,12 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    background: #141210;
+    background: #1e1a16;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 4rem 1.5rem 7rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem 1rem 7rem;
     font-family: var(--serif);
   }
 
@@ -251,27 +251,28 @@
   }
 
   .site-nav {
+    width: 100%;
+    max-width: 700px;
     display: flex;
     justify-content: flex-end;
     gap: 1.25rem;
-    margin: -1rem 0 2.25rem;
+    margin-bottom: 0.75rem;
     font-family: var(--mono);
-    font-size: 0.52rem;
-    letter-spacing: 0.22em;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
   }
 
   .site-nav a {
-    color: var(--red);
+    color: var(--gold);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     padding-bottom: 0.12rem;
-    opacity: 0.88;
   }
 
-  .site-nav a:hover { border-bottom-color: var(--red); opacity: 1; }
+  .site-nav a:hover { border-bottom-color: var(--gold); }
 
-  .site-nav .nav-current { color: var(--fade); }
+  .site-nav .nav-current { color: #a8977e; }
 
   @media (max-width: 620px) {
     .page { padding: 3.5rem 2rem 5rem; }
@@ -281,12 +282,11 @@
 </style>
 </head>
 <body>
+<nav class="site-nav" aria-label="Site">
+  <span class="nav-current" aria-current="page">Story</span>
+  <a href="outline.html">Outline</a>
+</nav>
 <article class="page">
-
-  <nav class="site-nav" aria-label="Site">
-    <span class="nav-current" aria-current="page">Story</span>
-    <a href="outline.html">Outline</a>
-  </nav>
 
   <header class="story-header">
     <span class="kicker">Flash Fiction &nbsp;·&nbsp; Final Draft</span>
